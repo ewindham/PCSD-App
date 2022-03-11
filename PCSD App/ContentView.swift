@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-   VStack
     var body: some View {
+        VStack {
         Text("PCSD")
-            .fontWeight(.bold)
-            .navigationTitle(<#T##title: Text##Text#>)
+            font(.title)
             .padding()
+        
+        Text("Prentiss County School District")
+                .font(.title)
+                .foregroundColor(Color.black)
+                .padding()
+                
+        }
+        
     }
 }
 
