@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+   
     var body: some View {
         VStack(alignment: .center, spacing: -7.0) {
-            Text("PCSD")
-                .font(.title)
-                .fontWeight(.heavy)
-                .multilineTextAlignment(.center)
-            
-            Text("Prentiss County School District")
-                .font(.headline)
+
+            Image("PCSD Home Logo")
+                .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                .aspectRatio(contentMode:.fit
+                )
+            Text("105 N. College Street")
                 .fontWeight(.thin)
-                .foregroundColor(Color.black)
+                .padding(.bottom, 3.0)
+            Text("Booneville, MS 38829")
+                .fontWeight(.thin)
                 .multilineTextAlignment(.center)
+                .padding(.bottom, 3.0)
+            Text("662-728-4911")
+                .fontWeight(.thin)
+
                 .lineLimit(nil)
-                .padding()
             //insertImageHere
             List() {
                 NavigationLink(destination: DistrictLink()){
