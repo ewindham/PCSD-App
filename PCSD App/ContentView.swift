@@ -10,43 +10,126 @@ import SwiftUI
 struct ContentView: View {
    
     var body: some View {
-        VStack(alignment: .center, spacing: -7.0) {
+        NavigationView() {
 
-            Image("PCSD Home Logo")
-                .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
-                .aspectRatio(contentMode:.fit
-                )
-            Text("105 N. College Street")
-                .fontWeight(.thin)
-                .padding(.bottom, 3.0)
-            Text("Booneville, MS 38829")
-                .fontWeight(.thin)
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 3.0)
-            Text("662-728-4911")
-                .fontWeight(.thin)
-
-                .lineLimit(nil)
-            //insertImageHere
-            List() {
-                NavigationLink(destination: DistrictLink()){
-                    Text("District News")
                     
-                }
+
+                    // .ignoresSafeArea()
+
+                    
+
                 
-                NavigationLink(destination: SchoolLinks()) {
-                    Text("Schools")
-                }
-            }
+
+                VStack() {
+
             
+                    Image("PCSD APP HOME PAGE 3")
+
+                        .aspectRatio(contentMode: .fill)
+
+                    
+
+                    
+
+                    NavigationLink(destination: DistrictLink()) {
+
+                        Text("District News")
+
+                            .padding()
+
+                            .foregroundColor(.white)
+
+                            .background(.gray)
+
+                            .clipShape(RoundedRectangle(cornerRadius: 10)
+
+                                        )
+
+                    }
+
+                    NavigationLink(destination: SchoolLinks()){
+
+                        Text("Schools")
+
+                            .padding()
+
+                            .foregroundColor(.white)
+
+                            .background(.black)
+
+                            .clipShape(RoundedRectangle(cornerRadius: 10)
+
+                                        )
+
+                    }
+
+                
+
+                    
+
+                }
+
+                
+
+                
+
+                .toolbar {
+
+                    ToolbarItemGroup(placement: .bottomBar) {
+
+                        
+
+                        
+
+                        
+
+                        Button("Home") {
+
+                            print("Home tapped")
+
+                            
+
+                        }
+
+                        Spacer()
+
+                        
+
+                        Button("Calendar") {
+
+                            print("Calendar tapped")
+
+                        }
+
+                        
+
+                        Spacer()
+
+                        
+
+                        Button("Alerts") {
+
+                            print("Alerts tapped")
+
+                        }
+
+                        
+
+                    }
+
+                    
+
+                    
+
+                }
+
+                .navigationBarHidden(true)
+
+            }
+
+            
+
         }
-        
-    }
-    
-    
-    
-    
-    
     
     
     struct ContentView_Previews: PreviewProvider {
